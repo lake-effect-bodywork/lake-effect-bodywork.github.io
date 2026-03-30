@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact + Booking | Lake Effect Bodywork</title>
+    <meta
+      name="description"
+      content="Contact Lake Effect Bodywork for booking, accessibility planning, and session questions."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="index.html">Lake Effect Bodywork</a>
+        <button class="menu-toggle" aria-expanded="false" aria-label="Open menu">
+          Menu
+        </button>
+        <nav class="main-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="sessions.html">Session Orientation</a></li>
+            <li><a href="resource-flow.html">Resource Flow</a></li>
+            <li><a href="community.html">Community Work</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section
+        id="booking-success"
+        class="section card success-banner"
+        role="status"
+        aria-live="polite"
+        hidden
+      >
+        Thank you - your booking request was sent. I will follow up soon.
+      </section>
+
+      <section class="hero stack">
+        <h1>Contact + Booking</h1>
+        <p class="lead">
+          Questions, booking requests, and accessibility planning are welcome.
+        </p>
+      </section>
+
+      <section class="section stack">
+        <h2>Reach out</h2>
+        <p>
+          <strong>Phone/Text:</strong>
+          <a href="tel:+17205390188">(720) 539-0188</a>
+        </p>
+        <p>
+          <strong>Address:</strong> 314 E Herbert Avenue, Salt Lake City, UT 84111 (a few blocks
+          west of Liberty Park)
+        </p>
+        <p>The house has a pride flag out front and sits right on the alley.</p>
+      </section>
+
+      <section class="section stack">
+        <h2>Booking details</h2>
+        <p>
+          Please include preferred session length (75, 90, or 120 minutes), your general
+          availability, and any access or bodywork preferences when reaching out.
+        </p>
+        <p>
+          Cash is preferred. Venmo, Zelle, and check are also available. Trade discussions are
+          welcome in limited spots.
+        </p>
+      </section>
+
+      <section class="section stack">
+        <h2>Booking request form</h2>
+        <form action="https://formsubmit.co/milo.emilia@protonmail.com" method="post" class="card">
+          <input type="hidden" name="_subject" value="New Lake Effect Bodywork booking request" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://lake-effect-bodywork.github.io/contact.html?sent=1" />
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+            </div>
+            <div class="field full">
+              <label for="email">Email (optional)</label>
+              <input id="email" name="email" type="email" autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="length">Preferred session length</label>
+              <select id="length" name="length" required>
+                <option value="">Select one</option>
+                <option value="75">75 minutes</option>
+                <option value="90">90 minutes</option>
+                <option value="120">120 minutes</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="timing">Preferred timing</label>
+              <input
+                id="timing"
+                name="timing"
+                type="text"
+                placeholder="Example: weekday mornings, Tuesdays after 3pm"
+                required
+              />
+            </div>
+            <div class="field full">
+              <label for="notes">Access needs, preferences, or anything you'd like me to know</label>
+              <textarea id="notes" name="notes"></textarea>
+            </div>
+          </div>
+          <p class="form-note">
+            I will follow up to confirm scheduling details after receiving your request.
+          </p>
+          <button type="submit" class="btn primary">Send request</button>
+          <p class="form-note">
+            If this is your first submission, FormSubmit may send a one-time activation email to
+            finish setup.
+          </p>
+        </form>
+      </section>
+
+      <section class="section">
+        <p class="todo">#TODO Add map embed or transit/parking visual.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Lake Effect Bodywork • Salt Lake City • <span id="year"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
