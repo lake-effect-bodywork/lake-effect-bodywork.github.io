@@ -41,6 +41,16 @@
         Thank you - your booking request was sent. I will follow up soon.
       </section>
 
+      <section
+        id="signup-success"
+        class="section card success-banner"
+        role="status"
+        aria-live="polite"
+        hidden
+      >
+        Thank you - you’re signed up for updates. I’ll email you when I’m in town and when I’ll be away.
+      </section>
+
       <section class="hero stack">
         <h1>Contact + Booking</h1>
         <p class="lead">
@@ -124,6 +134,46 @@
           <p class="form-note">
             If this is your first submission, FormSubmit may send a one-time activation email to
             finish setup.
+          </p>
+        </form>
+      </section>
+
+      <section class="section stack">
+        <h2>Get updates by email</h2>
+        <p class="lead">
+          Sign up to receive gentle scheduling updates: when I’m in town, when sessions are
+          open, and when I’ll be away for trainings and retreats.
+        </p>
+        <form action="https://formsubmit.co/milo.emilia@protonmail.com" method="post" class="card">
+          <input type="hidden" name="_subject" value="New Lake Effect Bodywork email update signup" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://lake-effect-bodywork.github.io/contact.html?signup=1" />
+          <div class="form-grid">
+            <div class="field full">
+              <label for="signup-email">Email address</label>
+              <input id="signup-email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field full">
+              <label for="signup-notes">Anything you want me to know (optional)</label>
+              <input
+                id="signup-notes"
+                name="notes"
+                type="text"
+                placeholder="Example: accessibility needs, preferred communication style"
+              />
+            </div>
+            <div class="field full">
+              <label for="signup-consent">
+                <input id="signup-consent" name="consent" type="checkbox" required />
+                I’d like to receive email updates from Lake Effect Bodywork.
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn primary">Sign up</button>
+          <p class="todo">
+            #TODO Connect this signup to a newsletter provider (Mailchimp/Buttondown/etc.) to
+            store addresses and send updates automatically.
           </p>
         </form>
       </section>
