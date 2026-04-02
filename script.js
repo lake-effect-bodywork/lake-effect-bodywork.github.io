@@ -1,3 +1,18 @@
+(function () {
+  const h = typeof location !== "undefined" ? location.hostname : "";
+  if (h === "lake-effect-bodywork.github.io") {
+    location.replace(
+      "https://lakeeffectbody.work" + location.pathname + location.search + location.hash
+    );
+    return;
+  }
+  if (h === "www.lakeeffectbody.work") {
+    location.replace(
+      "https://lakeeffectbody.work" + location.pathname + location.search + location.hash
+    );
+  }
+})();
+
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".main-nav");
 const yearEl = document.querySelector("#year");
